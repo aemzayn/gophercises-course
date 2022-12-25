@@ -23,11 +23,10 @@ func startQuiz() error {
 	}
 
 	var answer string
-	totalQuestions := 0
+	totalQuestions := len(data)
 	totalScore := 0
 
 	for _, s := range data {
-		totalQuestions += 1
 		fmt.Printf("%s?", s[0])
 		fmt.Scanln(&answer)
 		if answer == s[1] {
